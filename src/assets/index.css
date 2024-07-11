@@ -66,6 +66,17 @@
  
     --ring: 212.7 26.8% 83.9%;
   }
+
+  .red {
+    --red: 0 100% 60%;
+    --red-foreground: 0 100% 10%;
+    --red-muted: 0 80% 30%;
+    --red-muted-foreground: 0 60% 80%;
+    --red-accent: 0 90% 50%;
+    --red-accent-foreground: 0 100% 10%;
+    --red-destructive: 0 100% 60%;
+    --red-destructive-foreground: 0 100% 10%;
+  }
 }
  
 @layer base {
