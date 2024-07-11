@@ -1,30 +1,55 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Button from './components/ui/button/Button.vue'
+import Card from './components/ui/card/Card.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="flex justify-center items-center h-screen">
+    <Card class="w-[350px]">
+      <CardHeader>
+        <CardTitle>Create project</CardTitle>
+        <CardDescription>Deploy your new project in one-click.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div class="grid items-center w-full gap-4">
+            <div class="flex flex-col space-y-1.5">
+              <Label for="name">Name</Label>
+              <Input id="name" placeholder="Name of your project" />
+            </div>
+            <div class="flex flex-col space-y-1.5">
+              <Label for="framework">Framework</Label>
+              <Select>
+                <SelectTrigger id="framework">
+                  <SelectValue placeholder="Select" />
+                </SelectTrigger>
+                <SelectContent position="popper">
+                  <SelectItem value="nuxt">
+                    Nuxt
+                  </SelectItem>
+                  <SelectItem value="next">
+                    Next.js
+                  </SelectItem>
+                  <SelectItem value="sveltekit">
+                    SvelteKit
+                  </SelectItem>
+                  <SelectItem value="astro">
+                    Astro
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter class="flex justify-between px-6 pb-6">
+        <Button variant="outline">
+          Cancel
+        </Button>
+        <Button>Deploy</Button>
+      </CardFooter>
+    </Card>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
