@@ -67,6 +67,9 @@ module.exports = {
           "destructive-foreground": "hsl(var(--red-destructive-foreground))",
         },
       },
+      fontFamily: {
+        sans: ['poppins', 'sans-serif'],
+      },
       borderRadius: {
       	xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
